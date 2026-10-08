@@ -1,0 +1,243 @@
+<title>Dhrumil Shah Product Work</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column (~720px) with wide stat strips; each case study is a numbered chapter with the same five parts */
+:root{
+  --bg:#f6f7f9; --paper:#ffffff; --ink:#151b26; --muted:#5a6475; --line:#dde1e8;
+  --sun:#c46a00; --sun-soft:#fdf0e0; --navy:#1e3a5f; --navy-soft:#e6edf6;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif; --body:"Public Sans","Segoe UI",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10141b; --paper:#171c25; --ink:#e7ebf1; --muted:#9aa4b4; --line:#2a3240;
+  --sun:#f2a24a; --sun-soft:#33240f; --navy:#9cc0ea; --navy-soft:#1b2838; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10141b; --paper:#171c25; --ink:#e7ebf1; --muted:#9aa4b4; --line:#2a3240;
+  --sun:#f2a24a; --sun-soft:#33240f; --navy:#9cc0ea; --navy-soft:#1b2838; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.65 var(--body);padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:760px;margin:0 auto;display:grid;gap:56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:clamp(32px,6vw,48px);font-weight:700;letter-spacing:-.01em}
+h2{font-size:clamp(24px,4vw,32px);font-weight:700}
+h3{font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-family:var(--body)}
+p{margin:0;max-width:66ch}
+a{color:var(--navy)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+header{padding-top:56px;display:grid;gap:18px}
+.kicker{font-family:var(--mono);font-size:13px;color:var(--sun);letter-spacing:.04em}
+.lede{font-size:19px;color:var(--ink)}
+.note{font-size:13px;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.stat{background:var(--paper);padding:16px 18px;display:grid;gap:2px}
+.stat b{font-family:var(--display);font-size:30px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--ink)}
+.stat span{font-size:13px;color:var(--muted);line-height:1.4}
+nav.toc{display:flex;flex-wrap:wrap;gap:8px}
+nav.toc a{text-decoration:none;font-size:14px;border:1px solid var(--line);background:var(--paper);border-radius:20px;padding:4px 12px;color:var(--ink)}
+nav.toc a:hover{border-color:var(--sun)}
+section.case{display:grid;gap:22px;padding-top:8px;border-top:2px solid var(--ink)}
+.casehead{display:grid;gap:8px}
+.num{font-family:var(--mono);font-size:13px;color:var(--sun)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:12px;font-family:var(--mono);background:var(--navy-soft);color:var(--navy);border-radius:4px;padding:1px 8px}
+.block{display:grid;gap:10px}
+ul{margin:0;padding-left:20px;display:grid;gap:6px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px;background:var(--paper);border:1px solid var(--line);border-radius:8px}
+th{text-align:left;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding:8px 12px;border-bottom:1px solid var(--line)}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600;min-width:150px}
+.results{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.r{background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--sun);border-radius:6px;padding:10px 14px;font-size:14px}
+.r b{display:block;font-family:var(--display);font-size:22px;font-variant-numeric:tabular-nums}
+.bars{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;align-items:end;height:150px;padding:12px 12px 0;background:var(--paper);border:1px solid var(--line);border-radius:8px}
+.bars div{display:grid;gap:4px;align-content:end;justify-items:center;height:100%}
+.bars i{display:block;width:100%;max-width:56px;background:var(--navy);border-radius:4px 4px 0 0}
+.bars i.hi{background:var(--sun)}
+.bars span{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.bars em{font-style:normal;font-family:var(--mono);font-size:13px}
+.next{background:var(--sun-soft);border-radius:8px;padding:14px 16px;display:grid;gap:6px}
+.how ol{margin:0;padding-left:22px;display:grid;gap:8px}
+footer{border-top:1px solid var(--line);padding-top:18px}
+:focus-visible{outline:2px solid var(--sun);outline-offset:2px}
+</style>
+
+<div class="wrap">
+<header>
+  <span class="kicker">PRODUCT WORK · JUL – OCT 2026</span>
+  <h1>Dhrumil Shah</h1>
+  <p class="lede">I run product for the internal software of a 25-person solar EPC company in Gujarat. In 11 weeks I took a sales CRM and an HR &amp; admin portal from problem to production, and both are used every working day. I also built an AI website assistant to learn LLM evaluation and observability.</p>
+  <p class="note">I owned the problem, the scope, the decisions, the rollout and the support. I wrote the software with an AI coding assistant (Claude Code) as my pair programmer. Company, staff and customer names are removed; numbers are real, counted on 8 Oct 2026.</p>
+  <div class="stats">
+    <div class="stat"><b>287</b><span>sales enquiries captured in the CRM in 5 weeks</span></div>
+    <div class="stat"><b>139</b><span>calls logged by reps in a single week, up from 37</span></div>
+    <div class="stat"><b>876</b><span>daily work tasks logged by 20 staff</span></div>
+    <div class="stat"><b>79</b><span>expense claims run through approvals</span></div>
+  </div>
+  <nav class="toc" aria-label="Case studies">
+    <a href="#crm">01 Sales CRM</a><a href="#hr">02 HR &amp; Admin portal</a><a href="#bot">03 AI website assistant</a><a href="#projects">04 Projects portal (discovery)</a><a href="#how">How I work</a>
+  </nav>
+</header>
+
+<!-- 01 CRM -->
+<section class="case" id="crm">
+  <div class="casehead">
+    <span class="num">01 · LIVE SINCE 1 SEP 2026</span>
+    <h2>A sales CRM where no lead can be left without a next step</h2>
+    <div class="tags"><span class="tag">Next.js</span><span class="tag">Supabase / Postgres</span><span class="tag">Row-level security</span><span class="tag">56 migrations</span></div>
+  </div>
+  <div class="block"><h3>Problem</h3>
+    <p>Sales enquiries lived in phones and personal sheets. Nobody could say how many enquiries came in, who was calling whom, or which leads had gone quiet.</p>
+  </div>
+  <div class="block"><h3>Users</h3>
+    <ul><li><b>A 6-person sales team</b> who cold-call all day and need to log a call in seconds.</li><li><b>The CEO</b>, who wants one screen of what's moving and what's stuck.</li><li><b>Execution and design teams</b>, who receive won jobs.</li></ul>
+  </div>
+  <div class="block"><h3>Key decisions</h3>
+    <div class="scroll"><table>
+      <thead><tr><th>Decision</th><th>Why</th><th>Trade-off</th></tr></thead>
+      <tbody>
+        <tr><td>Build, not buy</td><td>An off-the-shelf CRM (about ₹1,600/month for 4 users) covered the basics. We built because tender and bid tracking, our differentiator, isn't sold anywhere, and we wanted the rules below.</td><td>We own maintenance. I documented every decision in the repo so it isn't one person's memory.</td></tr>
+        <tr><td>"Every open lead has a next action and a date"</td><td>The core failure was leads going quiet. I made it a database rule, not a reminder, so a lead cannot be saved without one.</td><td>Slightly more typing per save. Result: 46 of 46 open leads have a next step.</td></tr>
+        <tr><td>Enquiry vs lead</td><td>Most cold calls never become real opportunities. Keeping them as light "enquiries" until qualified keeps the pipeline honest.</td><td>Two lists to explain; solved with one "Today" screen that merges what's due.</td></tr>
+        <tr><td>Everyone sees everything</td><td>A 6-person team loses more to hidden work than to oversharing. "Owner" means who chases it, not who may look.</td><td>Revisit if the team grows past ~15.</td></tr>
+        <tr><td>Host on the company's existing plan</td><td>The free tier of the first host doesn't allow commercial use. Moved to the web plan the company already paid for, on its own subdomain.</td><td>Slower builds; documented the workaround.</td></tr>
+        <tr><td>Remove a feature nobody used</td><td>Took out a separate "Focus" planning screen to keep the app to a few screens the team uses daily; kept the code to restore later.</td><td>Less to show, less to learn.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <div class="block"><h3>Results</h3>
+    <p>New enquiries entered per week, from launch to the last full week:</p>
+    <div class="bars" role="img" aria-label="Enquiries entered per week: 4, 1, 61, 82, 90">
+      <div><em>4</em><i style="height:4%"></i><span>31 Aug</span></div>
+      <div><em>1</em><i style="height:2%"></i><span>7 Sep</span></div>
+      <div><em>61</em><i style="height:68%"></i><span>14 Sep</span></div>
+      <div><em>82</em><i style="height:91%"></i><span>21 Sep</span></div>
+      <div><em>90</em><i class="hi" style="height:100%"></i><span>28 Sep</span></div>
+    </div>
+    <div class="results">
+      <div class="r"><b>37 → 139</b>calls logged by reps as they happened, week of 21 Sep vs 28 Sep</div>
+      <div class="r"><b>95</b>calls logged in the first 3 days of the next week</div>
+      <div class="r"><b>50</b>qualified leads, 2,250 kW of solar capacity</div>
+      <div class="r"><b>849</b>edits recorded in the change history</div>
+    </div>
+    <p class="note">Call counts exclude 126 earlier calls that were entered later from records, so the trend shows real-time logging only.</p>
+  </div>
+  <div class="next"><h3>Learned / next</h3>
+    <p>Real-time call logging nearly quadrupled the week each rep got a "Your day" strip showing their own calls and follow-ups. Showing people their own work moved adoption more than new features did. Next: measure enquiry → lead → order conversion once enough deals close (checking in December), and bring back tender tracking.</p>
+  </div>
+</section>
+
+<!-- 02 HR -->
+<section class="case" id="hr">
+  <div class="casehead">
+    <span class="num">02 · LIVE SINCE 1 AUG 2026</span>
+    <h2>One HR &amp; admin portal for claims, leave and daily work reports</h2>
+    <div class="tags"><span class="tag">Next.js</span><span class="tag">Google Sheets + Drive as the database</span><span class="tag">Vercel</span><span class="tag">37 pull requests</span></div>
+  </div>
+  <div class="block"><h3>Problem</h3>
+    <p>Expense claims, leave requests and daily work updates had no single place: no shared record of what was pending, who had approved what, or who did what each day.</p>
+  </div>
+  <div class="block"><h3>Users</h3>
+    <ul><li><b>25 staff</b>: office, sales and site engineers, often on a phone at a site.</li><li><b>Approvers</b>: accounts, the COO and the CEO.</li><li><b>HR</b>, who needs leave balances and policies in one place.</li></ul>
+  </div>
+  <div class="block"><h3>What shipped, in order</h3>
+    <ul>
+      <li><b>Reimbursements</b> (Aug): submit with bill → accounts check → COO approves → CEO also approves above ₹25,000; daily email to each approver; "paid" status from accounts.</li>
+      <li><b>Leave</b> (Aug): balances, holidays, manager → HR approval; leave over 2 days also goes to the CEO.</li>
+      <li><b>Daily work report</b> (Sep): each person lists today's tasks and ticks them off; managers assign tasks; an 11 pm PDF tells leadership who didn't submit.</li>
+      <li><b>Policies, overtime, tenders, site visit logs</b> (Sep).</li>
+    </ul>
+  </div>
+  <div class="block"><h3>Key decisions</h3>
+    <div class="scroll"><table>
+      <thead><tr><th>Decision</th><th>Why</th><th>Trade-off</th></tr></thead>
+      <tbody>
+        <tr><td>Google Sheets as the database</td><td>Accounts already lived in Sheets and wanted to see and fix rows themselves. The brief said Postgres; the users said Sheets.</td><td>Google's rate limit is the ceiling. I measured requests per screen and cut them from 26 to 15 across 8 screens.</td></tr>
+        <tr><td>Bills are private by default</td><td>Bills and leave documents carry personal data. Since Sep, files are shared with nobody and open only through the portal after a permission check; 72 old open links were removed.</td><td>Approvers can't forward a Drive link; that's the point.</td></tr>
+        <tr><td>Security pass before rollout to all staff</td><td>Six fixes: access checks so one user can't open another's claim, input sanitising, login rate limit, audit log, safe redirects, 20-minute idle logout.</td><td>One week with no new features.</td></tr>
+        <tr><td>Fix the bug, not the symptom</td><td>When two people saved their work report at the same moment, one overwrote the other. Found the root cause in how rows were appended and fixed it in every tab, not just the one reported.</td><td>A larger change, but the bug can't come back elsewhere.</td></tr>
+        <tr><td>Upload big files in 3 MB pieces</td><td>The host rejects requests over ~4.5 MB, and site engineers photograph bills on phones. Chunked uploads allow 25 MB PDFs.</td><td>More code paths to test.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <div class="block"><h3>Results</h3>
+    <div class="results">
+      <div class="r"><b>79</b>claims from 15 people; 51 approved, 8 sent back for missing info</div>
+      <div class="r"><b>30 h</b>median from applying for leave to a decision (19 requests)</div>
+      <div class="r"><b>876</b>work-report tasks from 20 people in 29 days; 64% marked done</div>
+      <div class="r"><b>18</b>people filed a work report on the busiest day (of 25)</div>
+      <div class="r"><b>1,187</b>actions in the audit log</div>
+    </div>
+  </div>
+  <div class="next"><h3>Learned / next</h3>
+    <p>I didn't record how long claims took before the portal, so I can't show a before/after. Next time I'll take a baseline before launch. Next up: phone clock-in tied to project sites, and one "My approvals" page across claims, leave and overtime.</p>
+  </div>
+</section>
+
+<!-- 03 Bot -->
+<section class="case" id="bot">
+  <div class="casehead">
+    <span class="num">03 · PROTOTYPE · LLM EVALUATION PRACTICE</span>
+    <h2>An AI website assistant, measured before it's trusted</h2>
+    <div class="tags"><span class="tag">Gemini API</span><span class="tag">Python</span><span class="tag">Langfuse traces</span><span class="tag">LLM-as-judge</span></div>
+  </div>
+  <div class="block"><h3>Problem</h3>
+    <p>Website visitors ask the same questions (price ranges, subsidy, products) and many leave without contacting sales. A chat assistant could answer and capture the enquiry, but only if its answers are correct and grounded in what the company actually offers.</p>
+  </div>
+  <div class="block"><h3>What I built</h3>
+    <ul>
+      <li>A Q&amp;A bot that answers only from the company's website text, sent with every question (grounding; no fine-tuning).</li>
+      <li>Tracing for every reply: latency, tokens, model, errors and fallbacks, viewable in Langfuse.</li>
+      <li>A 27-question test set, a second model as judge (correct, grounded, followed instructions), and a compare command to check a new prompt against the old one.</li>
+    </ul>
+  </div>
+  <div class="block"><h3>Results so far</h3>
+    <div class="results">
+      <div class="r"><b>76%</b>of judged answers passed (16 of 21)</div>
+      <div class="r"><b>2.5 s</b>median reply; 5 s at p95</div>
+      <div class="r"><b>~3,900</b>tokens in per question, ~60 out</div>
+    </div>
+    <p>The failures were useful: the bot left out numbers it had (a discount range, a product's price band) and missed a product for a "factory parking" question. A free-tier quota day pushed the fallback rate to 55%, so the judge now stops instead of retrying.</p>
+  </div>
+  <div class="next"><h3>Next</h3>
+    <p>Hand-mark 10 answers to measure how often the AI judge agrees with a human; write prompt v2 for the failure cases and compare v1 vs v2. Only then pitch it for the live site.</p>
+  </div>
+</section>
+
+<!-- 04 Projects -->
+<section class="case" id="projects">
+  <div class="casehead">
+    <span class="num">04 · DISCOVERY · NOT BUILT YET</span>
+    <h2>A projects portal for design, purchase and site teams</h2>
+    <div class="tags"><span class="tag">Discovery</span><span class="tag">Competitor research</span><span class="tag">Clickable prototype</span></div>
+  </div>
+  <div class="block"><h3>Problem</h3>
+    <p>Project tracking lived in a detailed spreadsheet with a full stage plan, but its task statuses were almost never updated. The plan wasn't the problem; updating it from a site on a phone was.</p>
+  </div>
+  <div class="block"><h3>What I did</h3>
+    <ul>
+      <li>Mapped the hand-offs: drawings approved for construction (design → purchase) and material at site (purchase → execution).</li>
+      <li>Kept the spreadsheet's good ideas (standard task list, auto-planned dates, health colours) and removed the copy-paste steps that stopped people using it.</li>
+      <li>Researched an established HR and projects suite to decide what to copy (site-tagged attendance, budget vs actual) and what not to (hourly billing, payroll).</li>
+      <li>Built a clickable prototype with example data: dashboard, "My tasks" per team, daily site update, task template, plan check against the target date.</li>
+    </ul>
+  </div>
+  <div class="next"><h3>Success will mean</h3>
+    <p>Every active project updated at least daily from site, and leadership running the morning call from the dashboard instead of phone calls.</p>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <h2>How I work</h2>
+  <ol>
+    <li><b>Start from the failure, not the feature.</b> "Leads go quiet" became a database rule; "nobody updates the sheet" became a phone-first task list.</li>
+    <li><b>Mock it before building it.</b> Clickable prototypes with example data get feedback in a day.</li>
+    <li><b>Ship small and often.</b> 475 commits and 37 reviewed pull requests across the two live apps in 11 weeks.</li>
+    <li><b>Protect people's data by default.</b> Private files, access checks, audit logs before rollout.</li>
+    <li><b>Measure.</b> Usage from the data itself, request counts per screen, and for AI: test sets, judges and traces.</li>
+  </ol>
+</section>
+
+<footer class="note">Numbers counted from the live systems on 8 Oct 2026. Screens and demos use example data.</footer>
+</div>
